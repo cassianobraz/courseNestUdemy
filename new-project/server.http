@@ -8,3 +8,9 @@ GET {{baseUrl}}/recados/1
 
 ### Create new recado
 POST {{baseUrl}}/recados
+Content-Type: application/json
+
+{
+  "recado": "this is recad send!",
+  "new key": "outher value"
+}
