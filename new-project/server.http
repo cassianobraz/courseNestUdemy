@@ -14,3 +14,11 @@ Content-Type: application/json
   "recado": "this is recad send!",
   "new key": "outher value"
 }
+
+### Atualiza um recado
+PATCH {{baseUrl}}/recados/1
+Content-Type: application/json
+
+{
+  "recado": "Este é o recado que estou enviando!"
+}
