@@ -2,7 +2,6 @@
 
 ### show recados
 GET {{baseUrl}}/recados
-
 ### show one recados
 GET {{baseUrl}}/recados/1
 
@@ -11,14 +10,24 @@ POST {{baseUrl}}/recados
 Content-Type: application/json
 
 {
-  "recado": "this is recad send!",
-  "new key": "outher value"
+    "texto": "Novo Recado",
+    "de": "Joana",
+    "para": "João",
+    "lido": false,
+    "data": "2024-09-17T16:17:30.538Z"
 }
 
 ### Atualiza um recado
-PATCH {{baseUrl}}/recados/1
+PATCH {{baseUrl}}/recados/2
 Content-Type: application/json
 
 {
-  "recado": "Este é o recado que estou enviando!"
+    "texto": "Novo Recado",
+    "de": "Joana",
+    "para": "João",
+    "lido": false,
+    "data": "2024-09-17T16:17:30.538Z"
 }
+
+###
+DELETE  {{baseUrl}}/recados/2

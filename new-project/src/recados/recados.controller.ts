@@ -1,4 +1,13 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+} from '@nestjs/common';
+import { RecadosService } from './recados.service';
 
 /**
  * CRUD
@@ -15,26 +24,29 @@ import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 
 @Controller('recados')
 export class RecadosController {
+  constructor(private readonly recadosService: RecadosService) {}
+
   @Get()
   findAll() {
-    return 'This action returns all recados';
+    return this.recadosService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return `This action returns a #${id} recado`;
+    return this.recadosService.findOne(id);
   }
 
   @Post()
   create(@Body() body: any) {
-    return body;
+    return this.recadosService.create(body);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: any) {
-    return {
-      id,
-      ...body,
-    };
+    return this.recadosService.update(id, body);
+  }
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.recadosService.remove(id);
   }
 }
