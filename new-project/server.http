@@ -3,7 +3,7 @@
 ### show recados
 GET {{baseUrl}}/recados
 ### show one recados
-GET {{baseUrl}}/recados/1
+GET {{baseUrl}}/recados/2
 
 ### Create new recado
 POST {{baseUrl}}/recados
