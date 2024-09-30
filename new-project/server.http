@@ -12,9 +12,7 @@ Content-Type: application/json
 {
     "texto": "Novo Recado",
     "de": "Joana",
-    "para": "João",
-    "lido": false,
-    "data": "2024-09-17T16:17:30.538Z"
+    "para": "João"
 }
 
 ### Atualiza um recado
@@ -22,11 +20,8 @@ PATCH {{baseUrl}}/recados/2
 Content-Type: application/json
 
 {
-    "texto": "Novo Recado",
-    "de": "Joana",
-    "para": "João",
-    "lido": false,
-    "data": "2024-09-17T16:17:30.538Z"
+    "texto": "ATUALIZAR Recado",
+    "lido": true
 }
 
 ###

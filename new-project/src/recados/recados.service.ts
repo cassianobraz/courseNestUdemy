@@ -25,7 +25,7 @@ export class RecadosService {
     return this.recados;
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     const recado = this.recados.find(item => item.id === +id);
 
     if (recado) return recado;
@@ -64,8 +64,8 @@ export class RecadosService {
     }
   }
 
-  remove(id: string) {
-    const index = this.recados.findIndex(item => item.id === +id);
+  remove(id: number) {
+    const index = this.recados.findIndex(item => item.id === id);
 
     if (index < 0) {
       this.throwNotFoundError();
